@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>Modified from the original ASP bundle. Originally modified by Thomas Aylott subtleGradient.com</string>
+	<string>Modificado a partir do bundle ASP original. Modificação original por Thomas Aylott (subtleGradient.com)</string>
 	<key>fileTypes</key>
 	<array>
 		<string>prg</string>
@@ -24,19 +24,8 @@
 			<key>include</key>
 			<string>#round-brackets</string>
 		</dict>
+<!-- Trecho desabilitado: realce de tabs/espaços no início da linha (meta.leading-space).
 		<dict>
-			<key>match</key>
-			<string>(["'])(?:(?=(\\?))\2.)*?\1</string>
-			<key>name</key>
-			<string>string.foxpro</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(\[)(.*)(\])</string>
-			<key>name</key>
-			<string>string.foxpro</string>
-		</dict>
-<!-- 		<dict>
 			<key>begin</key>
 			<string>^(?=\t)</string>
 			<key>end</key>
@@ -107,7 +96,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(?i:prot|protected\s*)?((?i:function|func|procedure|proc))\s*([a-zA-Z_]\w*)</string>
+			<string>^\s*(?i:prot|protected\s*)?((?i:function|func|procedure|proc))\s*([a-zA-Z_]\w*)</string>
 			<key>name</key>
 			<string>meta.function.foxpro</string>
 		</dict>
@@ -140,6 +129,35 @@
 			<key>name</key>
 			<string>meta.class.foxpro</string>
         </dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.foxpro</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.foxpro</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.foxpro</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.foxpro</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*((?i:set))\s+((?i:procedure|proc))\s+((?i:to))(?:\s+(.+?))?(?:\s+((?i:additive)))?\s*$</string>
+			<key>name</key>
+			<string>meta.command.set-procedure.foxpro</string>
+		</dict>
 		<dict>
 			<key>begin</key>
 			<string>^(\s*)(?=\*)</string>
@@ -208,7 +226,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(If|Else|endif|Case|endcase|other|otherwise|Select|Return|With|EndWith|IIf|Try|Catch|EndTry|repl|replace)\b)</string>
+			<string>(?i:\b(If|Else|endif|then|Case|endcase|other|otherwise|Select|Return|With|EndWith|IIf|Try|Catch|EndTry|repl|replace)\b)</string>
 			<key>name</key>
 			<string>keyword.control.foxpro</string>
 		</dict>
@@ -313,7 +331,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\s*\b(Define Class|EndDefine|Dimension|Function|Procedure|EndFunc|EndProc|On Error)\b\s*)</string>
+			<string>(?i:^\s*\b(Define Class|EndDefine|Dimension|Function|Procedure|Func|Proc|EndFunc|EndProc|EndF|EndP|On Error)\b\s*)</string>
 			<key>name</key>
 			<string>storage.type.foxpro</string>
 		</dict>
@@ -424,7 +442,8 @@
 		</dict>
 
 		
-<!--		<dict>
+<!-- Trecho desabilitado: variáveis com prefixo $ (variable.other.foxpro).
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -518,6 +537,18 @@
 			<key>name</key>
 			<string>keyword.operator.foxpro</string>
 		</dict>
+		<dict>
+			<key>match</key>
+			<string>;</string>
+			<key>name</key>
+			<string>punctuation.terminator.foxpro</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>,</string>
+			<key>name</key>
+			<string>punctuation.separator.comma.foxpro</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -549,7 +580,7 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>$self</string>
+					<string>$base</string>
 				</dict>
 			</array>
 		</dict>

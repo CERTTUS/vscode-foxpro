@@ -14,7 +14,7 @@
         ["'", "'"]
     ],
 	"indentationRules": {
-		"increaseIndentPattern": "^\\s*(DEFI|DEFINE|FUNCTION|PROCEDURE|PROC|FUNC|FOR|IF|TEXT|SCAN|TRY|CATCH|FINALLY|DO CASE|DO WHILE)",
+		"increaseIndentPattern": "^(?!\\s*[Ss][Ee][Tt]\\s+[Pp][Rr][Oo][Cc](?:[Ee][Dd][Uu][Rr][Ee])?\\s+[Tt][Oo]\\b)\\s*(DEFI|DEFINE|FUNCTION|PROCEDURE|PROC|FUNC|FOR|IF|TEXT|SCAN|TRY|CATCH|FINALLY|DO CASE|DO WHILE)",
 		"decreaseIndentPattern": "^\\s*(ENDI|ENDD|ENDP|ENDF|ENDS|ENDT|ENDC)"
 	}
 }

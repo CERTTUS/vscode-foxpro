@@ -1,14 +1,14 @@
 {
 	"name": "foxpro",
-	"displayName": "FoxPro Syntax Highlighting",
-	"description": "Syntax Highlighting and Snippets for Visual FoxPro",
+	"displayName": "Realce de sintaxe FoxPro",
+	"description": "Realce de sintaxe e snippets para Visual FoxPro",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/newdatasystems/vscode-foxpro.git"
 	},
 	"icon": "fox.png",
 	"homepage": "https://github.com/newdatasystems/vscode-foxpro",
-	"version": "1.4.12",
+	"version": "1.4.16",
 	"author": "Tom Bellin",
 	"publisher": "newdatasystems",
 	"engines": {
@@ -30,7 +30,8 @@
 				"aliases": [
 					"foxpro",
 					"Visual FoxPro",
-					"VFP"
+					"VFP",
+					"FoxPro (VFP)"
 				],
 				"extensions": [
 					".prg",

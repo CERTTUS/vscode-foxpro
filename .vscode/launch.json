@@ -1,9 +1,9 @@
-// A launch configuration that compiles the extension and then opens it inside a new window
+// Configuração de depuração que abre a extensão em uma nova janela do VS Code/Cursor
 {
 	"version": "0.1.0",
 	"configurations": [
 		{
-			"name": "Launch Extension",
+			"name": "Executar extensão",
 			"type": "extensionHost",
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
